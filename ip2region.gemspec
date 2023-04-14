@@ -13,7 +13,7 @@ Gem::Specification.new do |spec|
   spec.license = "MIT"
   spec.required_ruby_version = ">= 2.6.0"
 
-  spec.metadata["homepage_uri"] = spec.homepage
+  spec.metadata["homepage_uri"] = "https://github.com/jicheng1014/ruby-ip2region"
   spec.metadata["source_code_uri"] = "https://github.com/jicheng1014/ruby-ip2region"
 
   # Specify which files should be added to the gem when it is released.
