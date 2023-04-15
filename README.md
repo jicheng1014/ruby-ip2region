@@ -9,7 +9,7 @@
 为了方便直接搞成 gem 包, 故单独开了个项目
 
 ## 安装
-gem install ip2region
+`gem install ip2region`
 ## 使用
 
 **需要外挂 xdb 文件**
@@ -22,11 +22,23 @@ require 'ip2region'
 Ip2region.ip_2_region_path="./ip2region.xdb"
 
 # 查询
-Ip2region.search("114.114.114.114“)
+Ip2region.search("114.114.114.114")
 # => "中国|0|江苏省|南京市|0"
 
 Ip2region.search "127.0.0.1"
  => "0|0|0|内网IP|内网IP"
+
+Ip2region.search("192.168.1.1")
+ => "0|0|0|内网IP|内网IP"
+
+
+Ip2region.search("114.114.114.333")
+# IPAddr::InvalidAddressError: invalid address
+
+
+# 不支持 ipv6
+Ip2region.search("24ff:8262:c7f:4dea:81e0:2dff:6f9d:f300")
+ => nil
 
 ```
 
